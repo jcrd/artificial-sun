@@ -25,6 +25,9 @@ pixels = neopixel.NeoPixel(
     board.D5, 24, brightness=1.0, auto_write=False, pixel_order=neopixel.RGBW
 )
 
+bpix = neopixel.NeoPixel(board.NEOPIXEL, 1)
+bpix[0] = (10, 0, 0)
+
 i2c = board.STEMMA_I2C()
 rtc = adafruit_pcf8523.PCF8523(i2c)
 
