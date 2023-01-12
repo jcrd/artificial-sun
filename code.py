@@ -4,7 +4,6 @@ import time
 
 import adafruit_pcf8523
 import board
-import busio
 import neopixel
 
 INTERVAL = 5 * 60
@@ -26,7 +25,7 @@ pixels = neopixel.NeoPixel(
     board.D6, 24, brightness=1.0, auto_write=False, pixel_order=neopixel.RGBW
 )
 
-i2c = busio.I2C(board.SCL1, board.SDA1)
+i2c = board.STEMMA_I2C()
 rtc = adafruit_pcf8523.PCF8523(i2c)
 
 
