@@ -1,3 +1,5 @@
+# pyright: reportShadowedImports=false
+
 import time
 
 import adafruit_pcf8523
