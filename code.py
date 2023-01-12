@@ -22,7 +22,7 @@ light_data = [
 ]
 
 pixels = neopixel.NeoPixel(
-    board.D6, 24, brightness=1.0, auto_write=False, pixel_order=neopixel.RGBW
+    board.D5, 24, brightness=1.0, auto_write=False, pixel_order=neopixel.RGBW
 )
 
 i2c = board.STEMMA_I2C()
