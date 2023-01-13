@@ -8,9 +8,6 @@ import neopixel
 
 INTERVAL = 5 * 60
 
-NOW = time.struct_time((2022, 10, 6, 13, 55, 0, 0, -1, -1))
-SET_TIME = False
-
 light_data = [
     (0.0, (0.0, (0, 0, 0, 0))),
     (7.0, (0.1, (244, 254, 169, 0))),
@@ -30,10 +27,6 @@ bpix[0] = (10, 0, 0)
 
 i2c = board.STEMMA_I2C()
 rtc = adafruit_pcf8523.PCF8523(i2c)
-
-
-if SET_TIME:
-    rtc.datetime = NOW
 
 
 def lerp(begin, end, t):

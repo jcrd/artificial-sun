@@ -1,0 +1,13 @@
+import time
+
+import adafruit_pcf8523
+import board
+
+i2c = board.STEMMA_I2C()
+rtc = adafruit_pcf8523.PCF8523(i2c)
+
+NOW = "@DATETIME"
+
+rtc.datetime = time.struct_time(tuple(int(i) for i in NOW.split(", ")))
+
+print(NOW)
